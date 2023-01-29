@@ -1,5 +1,5 @@
 -- this callback function will run EVERY TIME a new player has connected
-level:onnotifyonce("game_ended", function()
+level:onnotifyonce("game_ended", function() -- The script is executed after the game ends, if you want it to be executed at the beginning of each game, change "game_ended" to "prematch_over"
 
     local gametypewin = getgametypewin()
     local mapwin = getmapwin()
