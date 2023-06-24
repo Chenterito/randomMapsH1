@@ -1,14 +1,10 @@
--- this callback function will run EVERY TIME a new player has connected
 level:onnotifyonce("game_ended", function() -- The script is executed after the game ends, if you want it to be executed at the beginning of each game, change "game_ended" to "prematch_over"
-
+        
     local gametypewin = getgametypewin()
     local mapwin = getmapwin()
-    --player.spawns = 0 -- we setup a new variable to keep count of spawns on the player entity
     game:executecommand('set sv_maprotationcurrent "gametype ' .. gametypewin .. ' map ' .. mapwin .. '"')
-    print('set sv_maprotationcurrent "gametype ' .. gametypewin .. ' map ' .. mapwin .. '"')
-    -- this callback function will run EVERY TIME the player has spawned
-    
-    
+    print('set sv_maprotationcurrent "gametype ' .. gametypewin .. ' map ' .. mapwin .. '"')   
+        
 end)
 
 function getgametypewin()
